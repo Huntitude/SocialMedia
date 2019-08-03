@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Media Project - Account Settings</title>
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="css/resetstyle.css">
+    <link rel="stylesheet" href="css/Index/NavBar.css">
+    <link rel="stylesheet" href="css/Account/AccountMain.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6f8bd3f5e5.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()  {
+            $(".showSingle").click(function(){
+                // (this).parent().find('li.active').removeClass('active');
+                // $(this).addClass('active');
+                $(".targetDiv").hide();
+                $("#div" + $(this).attr("target")).show();
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navigationBar">
+        <ul class="navul">
+            <a href="index.html"> <li class="navItem-home"><i class="fa fa-home"></i>Home</li> </a>
+            <a href="News.html" title="News"> <li class="navItem"><i class="fa fa-globe"></i></li> </a>
+            <a href="Account.html" title="Account Settings"> <li class="navItem"><i class="fa fa-user"></i></li> </a>
+            <a href="Messages.html" title="Messages"> <li class="navItem"><i class="fa fa-envelope"></i></li> </a>
+            <div class="dropdown">
+                <a href="#" title="Notifications"> <li class="navItem"><i class="fa fa-bell"></i></li> </a>
+                <div class="dropdown-content">
+                    <p>Billy Joe has posted a comment.</p>
+                    <p>Billy Joe has liked your post.</p>
+                </div>
+            </div>
+            <a href="#"> <li class="navItem-pic"> <img src="images/avatar1.png" alt="Pic"> </li></a>
+
+            <!-- Mobile View : Hamburger Menu -->
+            <div class="togglemenu" id="togglemenu" onclick="toggleNav()">
+            <div class="Hamburger-container" onclick="HamburgerFunction(this)" onclick="HamburgerFunction('TopNav')">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>                
+            </div>
+        </ul>
+        <div class="ResponsiveNav" id="TopNav">
+            <a href="News.html">News</a>
+            <a href="Account.html">Account Settings</a>
+            <a href="Messages.html">Messages</a>
+        </div>
+    </nav>
+    <!-- End of NavBar -->
+
+    <!-- Main Body Content -->
+    <div class="Main-Container">
+        <div class="AccountSettings">
+            <ul>
+                <li class="showSingle active" target="1"><span>General</span></li>
+                <li class="showSingle" target="2"><span>Notifications</span></li>
+                <li class="showSingle" target="3"><span>Blocking</span></li>
+                <li class="showSingle" target="4"><span>Support</span></li>
+            </ul>
+        </div>
+        <div class="DisplaySettings">
+            
+            <div class="targetDiv" id="div1">
+                <h1>General Account Settings</h1>
+                <hr>
+                <div class="generalblock">
+                    <form action="" method="GET">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="First Name">
+                        <br>
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" placeholder="Last Name">
+                        <br>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Username">
+                        <br>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="emial" placeholder="Email Address">
+                        <br>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Password">
+                        <br>
+                        <input type="submit" value="Update">
+                    </form>
+                </div>
+            </div>
+            <div class="targetDiv" id="div2">
+                <h1>Notifications</h1>
+                <hr>
+                <div class="generalblock">
+                    <form action="" post="get">
+                        <p>Notification sound on the website</p>
+                        <input type="radio" name="onoff1" value="On"> On
+                        <input type="radio" name="onoff1" value="Off"> Off 
+                        <p>Send an email when you recieve a notification</p>
+                        <input type="radio" name="onoff2" value="On"> On
+                        <input type="radio" name="onoff2" value="Off"> Off 
+                        <p>Recieve text messages on your mobile device</p>
+                        <input type="radio" name="onoff3" value="On"> On
+                        <input type="radio" name="onoff3" value="Off"> Off
+                        <input type="submit" value="Update">
+                    </form>
+                </div>
+            </div>
+            <div class="targetDiv" id="div3">
+                <h1>Manage Blocking</h1>
+                <hr>
+                <div class="generalblock">
+                    <form action="" post="get">
+                        <p>Block Users</p>
+                        <input type="checkbox"> Block All Messages <br>
+                        <input type="checkbox"> Block All Events
+                       <input type="submit" value="Update">
+                    </form>
+                </div>
+            </div>
+            <div class="targetDiv" id="div4">
+                <h1>Support</h1>
+                <hr>
+                <div class="generalblock">
+                    <div class="AccountSupport">
+                        <img src="images/accountsetting.png" alt="pic">
+                        <h3><a href="#">Account Settings</a></h3>
+                        <li>Change email or password</li>
+                        <li>Update login information</li>
+                    </div>
+                    <div class="ContactSupport">
+                        <img src="images/supportavatar.png" alt="pic">
+                        <h3><a href="#">Contact Support (via chat)</a></h3>
+                        <li>24/7 Contact Support</li>
+                        <li>Get fast professional help</li>
+                    </div>
+                    <div class="DeviceSupport">
+                        <img src="images/supportsettings.png" alt="">
+                        <h3><a href="#">Digital Services and Device Support</a></h3>
+                        <li>Find device help & support</li>
+                        <li>Troubleshoot device issues</li>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End Main Body Content -->
+
+
+
+
+</body>
+</html>

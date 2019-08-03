@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/resetstyle.css">
+    <link rel="stylesheet" href="css/Welcome/WelcomeStyleSheet.css">
+
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome  -->
+    <script src="https://kit.fontawesome.com/6f8bd3f5e5.js"></script> 
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".login-form").hide();
+            $(".Login").css("background", "none");
+            $(".Login").click(function(){
+                $(".signup-form").hide();
+                $(".login-form").show();
+                $(".Register").css("background", "none");
+                $(".Login").css("background", "white")
+            });
+            $(".Register").click(function(){
+                $(".signup-form").show();
+                $(".login-form").hide();
+                $(".Register").css("background", "white");
+                $(".Login").css("background", "none");
+            });
+        }); 
+
+    </script>
+    
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="NavigationBar">
+        <span class="NavigationLogo"> <i class="fab fa-linode"></i> Main Logo</span>
+    </nav>
+
+    <div class="Main-Container">
+        <div class="Register">
+            <h1>Sign Up</h1>
+            <p>New Users</p>
+        </div>
+        <div class="Login">
+            <h1>Login</h1>
+            <p>Existing Users</p>
+        </div>
+        
+        <div class="signup-form">
+            <label class="label" for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Your First Name" class="input"><br>
+            <label class="label" for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Your Last Name" class="input"><br>
+            <label class="label" for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday" class="input">
+            <label class="label" for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" class="input"><br>
+            <label class="label" for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Choose Your Password" class="input"><br>
+            <label class="label" for="confirmpassword">Confirm Password</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" class="input"><br>
+
+            <div class="btn" onclick="window.location.href = 'index.html#';">create account</div>
+        </div>
+
+        <div class="login-form">
+
+            <label for="loginEmail">Email</label>
+            <input type="text" name="loginEmail" id="loginEmail" class="input" placeholder="Email"><br>
+            <label for="loginPassword">Password</label>
+            <input type="password" name="loginPassword" id="loginPassword"  class="input" placeholder="Password"><br>
+            <div class="btn" onclick="window.location.href = 'index.html#';"> log in</div>
+            <span class="forgotpw"><a href="#">I forgot my password</a></span>
+        </div>
+
+    </div>
+
+</body>
+</html>

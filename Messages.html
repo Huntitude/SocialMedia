@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Media Project - Messages</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/Index/NavBar.css">
+    <link rel="stylesheet" href="css/Message/MessagesMain.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Javascript -->    
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+    <!-- fontawesome css -->
+    <script src="https://kit.fontawesome.com/6f8bd3f5e5.js"></script>
+
+    <script>
+        $(document).ready(function()  {
+            $(".showSingle").click(function(){
+                $(".targetDiv").hide();
+                $("#div" + $(this).attr("target")).show();
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navigationBar">
+            <ul class="navul">
+                <a href="index.html"> <li class="navItem-home"><i class="fa fa-home"></i>Home</li> </a>
+                <a href="News.html" title="News"> <li class="navItem"><i class="fa fa-globe"></i></li> </a>
+                <a href="Account.html" title="Account Settings"> <li class="navItem"><i class="fa fa-user"></i></li> </a>
+                <a href="#" title="Messages"> <li class="navItem"><i class="fa fa-envelope"></i></li> </a>
+                <div class="dropdown">
+                    <a href="#" title="Notifications"> <li class="navItem"><i class="fa fa-bell"></i></li> </a>
+                    <div class="dropdown-content">
+                        <p>Billy Joe has posted a comment.</p>
+                        <p>Billy Joe has liked your post.</p>
+                    </div>
+                </div>
+                <a href="#"> <li class="navItem-pic"> <img src="images/avatar1.png" alt="Pic"> </li></a>
+    
+                <!-- Mobile View : Hamburger Menu -->
+                <div class="togglemenu" id="togglemenu" onclick="toggleNav()">
+                <div class="Hamburger-container" onclick="HamburgerFunction(this)" onclick="HamburgerFunction('TopNav')">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>                
+                </div>
+            </ul>
+            <div class="ResponsiveNav" id="TopNav">
+                <a href="News.html">News</a>
+                <a href="Account.html">Account Settings</a>
+                <a href="Messages.html">Messages</a>
+            </div>
+        </nav>
+
+        <!-- Body content -->
+        <div class="body-content">
+            <!-- column 1 -->
+            <div class="column1">
+                <center><i class="fas fa-users"></i></center>
+                <h1>Friends</h1>
+                <div class="Friendsbackground">
+                    <div class="singlefriend " >
+                        <a class="showSingle" target="1"><img src="images/avatar3.png" alt=""><p>Friend #1</p></a>
+                    </div>
+                    <div class="singlefriend">
+                        <a class="showSingle" target="2"><img src="images/avatar2.png" alt=""><p>Friend #2</p></a>
+                    </div>
+                    <div class="singlefriend">
+                        <a class="showSingle" target="3" ><img src="images/avatar1.png" alt=""><p>Friend #3</p></a>
+                    </div>
+                    <div class="singlefriend">
+                        <a class="showSingle" target="4"><img src="images/avatar4.png" alt=""><p>Friend #4</p></a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end of column1 -->
+            <!-- column 2 -->
+            <div class="column2">
+
+            <div id="div1" class="targetDiv ">
+                <h1>Chatting with Friend #1</h1>
+                <div class="chatoutput">
+                    <div class="chatContainer">
+                        <img src="images/avatar3.png" alt="">
+                        <p>doing anything today?</p>
+                        <span class="time-right">12:45</span>
+                    </div>
+                    <div class="chatContainer darker">
+                        <img src="images/avatar1.png" class="right">
+                        <p>Hey! I'm fine. Thanks for asking.</p>
+                        <span class="time-left">11:01</span>
+                    </div>
+                    <div class="chatContainer">
+                        <img src="images/avatar3.png" alt="">
+                        <p>Hello. How are you?</p>
+                        <span class="time-right">11:00</span>
+                    </div>
+                </div>   
+            </div>
+
+            <div id="div2" class="targetDiv">
+                <h1>Chatting with Friend #2</h1>
+                <div class="chatoutput">
+                    <div class="chatContainer">
+                        <img src="images/avatar2.png" alt="">
+                        <p>Hey you there? We need to talk!</p>
+                        <span class="time-right">Yesterday</span>
+                    </div>
+                </div>   
+            </div>
+
+            <div id="div3" class="targetDiv">
+                <h1>Chatting with Friend #3</h1>
+                <div class="chatoutput">
+                    <div class="chatContainer">
+                        <img src="images/avatar1.png" alt="">
+                        <p>Sounds good to me man! See you on the court!</p>
+                        <span class="time-right">7:32</span>
+                    </div>
+                    <div class="chatContainer darker">
+                        <img src="images/avatar1.png" class="right">
+                        <p>Hey man, no problem! Definitely was a good game! I'm free Saturday so after 4 we can shoot some hoops.</p>
+                        <span class="time-left">11:01</span>
+                    </div>
+                    <div class="chatContainer">
+                        <img src="images/avatar1.png" alt="">
+                        <p>I am free tomorrow and over the weekend after 4pm.</p>
+                        <span class="time-right">Yesterday</span>
+                    </div>
+                    <div class="chatContainer">
+                        <img src="images/avatar1.png" alt="">
+                        <p>Thanks for the add! I really had a blast playing basketball. When do you wanna play again?</p>
+                        <span class="time-right">Yesterday</span>
+                    </div>
+                </div>   
+            </div>
+
+            <div id="div4" class="targetDiv">
+                <h1>Chatting with Friend #4</h1>
+                <div class="chatoutput">
+                    <div class="chatContainer">
+                        <img src="images/avatar4.png" alt="">
+                        <p>Sure! Coffee sounds amazing, which place sounds great?</p>
+                        <span class="time-right">3:41</span>
+                    </div>
+                    <div class="chatContainer darker">
+                        <img src="images/avatar1.png" class="right">
+                        <p>Sure! Had a great time with the family. We should grab some coffee whenever you're free :D </p>
+                        <span class="time-left">10:45</span>
+                    </div>
+                    <div class="chatContainer">
+                        <img src="images/avatar4.png" class="right">
+                        <p>You're more than welcome to come over again!</p>
+                        <span class="time-left">10:41</span>
+                    </div>
+                    <div class="chatContainer">
+                        <img src="images/avatar4.png" alt="">
+                        <p>Thanks for hangingout with us the other day!</p>
+                        <span class="time-right">Yesterday</span>
+                    </div>
+                </div>   
+            </div>
+
+
+            <!-- chatinput -->
+            <div class="chatinput">
+                <form action="#" method="GET">
+                    <i class="far fa-grin-beam"></i>
+                    <input type="text">
+                    <button class="btn" type="submit">Send</button>
+                    <i type="submit" class="fas fa-location-arrow"></i>
+                </form>
+            </div>
+
+        </div>
+        <!-- end of column2 -->
+            </div>
+        <!-- body content end -->
+    
+</body>
+</html>

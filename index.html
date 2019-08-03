@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="css/resetstyle.css">
+    <link rel="stylesheet" href="css/Index/NavBar.css">
+    <link rel="stylesheet" href="css/Index/index.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- fontawesome css -->
+    <script src="https://kit.fontawesome.com/6f8bd3f5e5.js"></script>
+
+
+    <title>Social Media Project - Home</title>
+</head>
+<body id="page-top">
+    <!-- NavBar -->
+    <nav class="navigationBar">
+        <ul class="navul">
+            <a href="#page-top"> <li class="navItem-home"><i class="fa fa-home"></i> &nbsp; Home</li> </a>
+            <a href="News.html" title="News"> <li class="navItem"><i class="fa fa-globe"></i></li> </a>
+            <a href="Account.html" title="Account Settings"> <li class="navItem"><i class="fa fa-user"></i></li> </a>
+            <a href="Messages.html" title="Messages"> <li class="navItem"><i class="fa fa-envelope"></i></li> </a>
+            <div class="dropdown">
+                <a href="#" title="Notifications"> <li class="navItem"><i class="fa fa-bell"></i></li> </a>
+                <div class="dropdown-content">
+                    <p>Billy Joe has posted a comment.</p>
+                    <p>Billy Joe has liked your post.</p>
+                </div>
+            </div>
+            <a href="#"> <li class="navItem-pic"> <img src="images/avatar1.png" alt="Pic"> </li></a>
+
+            <!-- Mobile View : Hamburger Menu -->
+            <div class="togglemenu" id="togglemenu" onclick="toggleNav()">
+            <div class="Hamburger-container" onclick="HamburgerFunction(this)" onclick="HamburgerFunction('TopNav')">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>                
+            </div>
+        </ul>
+        <div class="ResponsiveNav" id="TopNav">
+            <a href="News.html">News</a>
+            <a href="Account.html">Account Settings</a>
+            <a href="Messages.html">Messages</a>
+        </div>
+    </nav>
+
+    <!-- body content start-->
+    <div class="body-content">
+        <!-- Column 1 Start -->
+        <div class="column1">
+            <div class="myprofile">
+                <h5>My Profile</h5>
+                <center> <img src="images/avatar1.png" alt=""> </center>
+                <p><i class="fa fa-pencil-alt"></i> Your Profession</p>
+                <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Location</p>
+                <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> Birth Date</p>
+            </div>
+            <br>
+            <div class="myactivities">
+                <button class="activities-button" onclick="myGroups()"> <i class="fas fa-users"></i>My Groups </button>
+                <div id="activities-dropdown"> <p>You aren't in any groups. <a href="#">Search groups</a> </p></div>
+
+                <button class="activities-button" onclick="myEvents()" > <i class="far fa-calendar-check"></i> My Events </button>
+                <div id="activities-dropdown2"> <p>You have no upcoming events.</p></div>
+
+                <button class="activities-button" onclick="myPhotos()" > <i class="fas fa-camera"></i> My Photos </button>
+                <div id="activities-dropdown3"> <p>You don't have any photos to display.</p></div>
+            </div>
+            <br>
+            <div class="myinterests">
+                <p>Interests</p>
+                <p>
+                    <span class="interests1"> Coding Dojo </span>
+                    <span class="interests2"> Programming </span>
+                    <span class="interests3"> Web Design UI/UX</span>
+                    <span class="interests4"> Food</span>
+                    <span class="interests5"> Gaming </span>
+                    <span class="interests6"> Art </span>
+                    <span class="interests7"> Outdoors </span>
+                    <span class="interests8"> Drawing </span>
+                </p>
+            </div>
+            <br>
+            <!-- alert box -->
+            <div id="alert-box">
+                <span class="close" onclick="hide('alert-box')"> <i class="fas fa-times"></i> </span>
+                <p> <i class="fas fa-bell"></i> Hey!</p>
+                <p>People are looking at your profile. <a href="">Find out who!</a> </p>
+            </div>
+            <br>
+            <!-- Tablet View: 984px Column 3 is shifted into column 1. -->
+            <div class="MediaScreenTabletColumn3">
+                <div class="upcoming-events">
+                    <center>
+                        <p>Upcoming Events:</p>
+                        <img src="images/pexels-photo-2263410.jpeg" alt="">
+                        <bold>Rave Dance Party</bold>
+                        <br><br>
+                        <p> May 20, 2019</p>
+                        <p>7:00pm</p>
+                        <br>
+                        <button class="moreinfo"> Info </button>
+                    </center>
+                </div>
+                <br>
+                <div class="friend-request">
+                    <center>
+                        <p>Friend Request</p>
+                        <br>
+                        <img src="images/avatar3.png" alt="">
+                        <p>Super Kitten</p>
+                        <br>
+                        <div class="Accept"> <i class="fas fa-check"></i> </div>
+                        <div class="Decline"> <i class="fas fa-times"></i>  </div>
+                    </center>
+                </div>
+                <br>
+                <div class="ads">
+                    <p>Your ads goes here</p>
+                </div>
+                <br>
+                <div class="MOREADS">
+                    <p>And some more ads down here because we all love them so much!</p>
+                </div>
+                
+            </div>
+
+        </div>
+         <!-- Column 1 End -->
+
+         <!-- Column 2 Start -->
+        <div class="column2">
+            <!-- post message card -->
+            <div class="postmessage">
+                <div class="createpost">
+                    <p>Create Post</p>
+                </div>
+                <div class="postprofilepic">
+                    <img src="images/avatar1.png" alt="">
+                </div>
+                <form action="#">
+                    <label for=""></label>
+                    <textarea rows="5" placeholder="Write your comment here..."></textarea>
+                    <br>
+                    <button class="postbutton">  <i class="fas fa-pencil-alt"></i>  Post </button>
+                </form>
+            </div>
+            <br>
+            <!-- comment cards -->
+            <div class="comment-card">
+                <div class="comment">
+                    <br>
+                    <a href=""><img src="images/avatar2.png" alt=""></a>
+                    <p> 5 minutes ago</p>
+                    <a href=""><h3>Billy Joe</h3></a>
+                    <br><br><br><hr><br>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste dolorem sapiente a rerum odit nostrum eum quia, quas blanditiis. Numquam reiciendis facere dolorum in illum excepturi quia quam officiis nam?</p>
+                    <br>
+                    <button> <i class="far fa-thumbs-up"></i> Like </button>
+                    <button> <i class="far fa-comment-dots"></i> Comment </button>
+                    <br>
+                </div>
+            </div>
+            <div class="comment-card">
+                    <div class="comment">
+                        <br>
+                        <a href=""><img src="images/avatar4.png" alt=""></a>
+                        <p> 53 minutes ago</p>
+                        <a href=""><h3>Mr. Boss Man</h3></a>
+                        <br><br><br><hr><br>
+                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, possimus veritatis. Impedit nulla unde fuga enim ex eligendi ducimus, voluptate ad dicta eius numquam esse consequatur expedita tempora saepe dolore vel porro quasi, eum laborum deserunt repellendus? Necessitatibus ducimus modi dolor rem voluptate! Eligendi distinctio laborum corrupti dignissimos qui vitae sapiente fugit neque eius quidem ea quam, hic optio quas? Illo necessitatibus aperiam voluptate veniam quod placeat nemo, tempore deleniti veritatis aliquid non eos iure cumque obcaecati commodi ullam ut, at nam quam optio? Soluta mollitia possimus quis odio, eum quibusdam nemo nulla consequatur impedit corporis perspiciatis et ratione? Quam provident odit, id minima, quibusdam nulla ipsa porro dolorem omnis illo error possimus magnam nostrum recusandae nisi perferendis, unde voluptate!</p>
+                        <br>
+                        <button> <i class="far fa-thumbs-up"></i> Like </button>
+                        <button> <i class="far fa-comment-dots"></i> Comment </button>
+                    </div>
+            </div>
+            <div class="comment-card">
+                    <div class="comment">
+                        <br>
+                        <img src="images/avatar3.png" alt="">
+                        <p> 1 hour ago</p>
+                        <h3>Super Kittens</h3>
+                        <br><br><br><hr><br>
+                        <p> You've got to see this super cute kitten compilation video!! <a href="https://www.youtube.com/watch?v=SB-qEYVdvXA" target="_blank">https://www.youtube.com/watch?v=SB-qEYVdvXA</a> </p>
+                        <br>
+                        <button> <i class="far fa-thumbs-up"></i> Like </button>
+                        <button> <i class="far fa-comment-dots"></i> Comment </button>
+                    </div>
+            </div>
+
+        </div>
+        <!-- end of column2 -->
+
+        <!-- Column 3 Starts -->
+        <div class="column3">
+            <div class="upcoming-events">
+                <center>
+                    <p>Upcoming Events:</p>
+                    <img src="images/pexels-photo-2263410.jpeg" alt="">
+                    <bold>Rave Dance Party</bold>
+                    <br><br>
+                    <p> May 20, 2019</p>
+                    <p>7:00pm</p>
+                    <br>
+                    <button class="moreinfo"> Info </button>
+                </center>
+            </div>
+            <br>
+            <div class="friend-request">
+                <center>
+                    <p>Friend Request</p>
+                    <br>
+                    <img src="images/avatar3.png" alt="">
+                    <p>Super Kitten</p>
+                    <br>
+                    <div class="Accept"> <i class="fas fa-check"></i> </div>
+                    <div class="Decline"> <i class="fas fa-times"></i>  </div>
+                </center>
+            </div>
+            <br>
+            <div class="ads">
+                <p>Your ads goes here</p>
+            </div>
+            <br>
+            <div class="MOREADS">
+                <p>And some more ads down here because we all love them so much!</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- body content end -->
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Social Media Project - News</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/resetstyle.css">
+    <link rel="stylesheet" href="css/News/NewsMain.css">
+    <!-- Nav Bar CSS -->
+    <link rel="stylesheet" href="css/Index/NavBar.css">
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+
+
+    <!-- fontawesome css -->
+    <script src="https://kit.fontawesome.com/6f8bd3f5e5.js"></script>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navigationBar">
+            <ul class="navul">
+                <a href="index.html"> <li class="navItem-home"><i class="fa fa-home"></i>Home</li> </a>
+                <a href="News.html" title="News"> <li class="navItem"><i class="fa fa-globe"></i></li> </a>
+                <a href="Account.html" title="Account Settings"> <li class="navItem"><i class="fa fa-user"></i></li> </a>
+                <a href="Messages.html" title="Messages"> <li class="navItem"><i class="fa fa-envelope"></i></li> </a>
+                <div class="dropdown">
+                    <a href="#" title="Notifications"> <li class="navItem"><i class="fa fa-bell"></i></li> </a>
+                    <div class="dropdown-content">
+                        <p>Billy Joe has posted a comment.</p>
+                        <p>Billy Joe has liked your post.</p>
+                    </div>
+                </div>
+                <a href="#"> <li class="navItem-pic"> <img src="images/avatar1.png" alt="Pic"> </li></a>
+    
+                <!-- Mobile View : Hamburger Menu -->
+                <div class="togglemenu" id="togglemenu" onclick="toggleNav()">
+                <div class="Hamburger-container" onclick="HamburgerFunction(this)" onclick="HamburgerFunction('TopNav')">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>                
+                </div>
+            </ul>
+            <div class="ResponsiveNav" id="TopNav">
+                <a href="News.html">News</a>
+                <a href="Account.html">Account Settings</a>
+                <a href="Messages.html">Messages</a>
+            </div>
+        </nav>
+
+        <!-- Body Content -->
+    <div class="Main-Container">
+        <h1 class="NewsHeaderh1">Social Media News & Updates</h1>
+        <br><hr><br><br><br>
+
+        <!-- Each news Container -->
+        <div class="NewsContainer">
+            <h1>May 20, 2019: New updates</h1>
+            <br>
+            <div class="NewsContent">
+                    <p> 
+                        <li><span class="boldtext">Fixed Latest Bugs:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, similique!</li><li><span class="boldtext">Added a login & registration page:</span> Lorem ipsum dolor sit amet consectetur adipisicing.</li><li><span class="boldtext">Working on new messaging system:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, similique!</li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                <br>
+                <span onclick="myNews1(this)" id="myBtn">Read More</span>
+            </div>
+        </div>
+        <br>
+        <div class="NewsContainer">
+                <h1>March 20, 2019: New Security Added</h1>
+                <br>
+                <div class="NewsContent">
+                        <p> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt aliquam commodi, eos voluptate harum dolores similique, repellendus, consectetur doloribus consequuntur recusandae ut vel. Ullam distinctio reiciendis accusantium ipsum. Veritatis. </span></p>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div class="NewsContainer">
+                <h1>January 1, 2019: New And Improved UI Design</h1>
+                <br>
+                <div class="NewsContent">
+                        <p> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt aliquam commodi, eos voluptate harum dolores similique, repellendus, consectetur doloribus consequuntur recusandae ut vel. Ullam distinctio reiciendis accusantium ipsum. </p>
+
+                </div>
+            </div>
+            <br>
+            <div class="NewsContainer">
+                <h1>December 25, 2018: Merry Christmas to everyone!</h1>
+                <br>
+                <div class="NewsContent">
+                        <p> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt aliquam commodi, eos voluptate harum dolores similique, repellendus, consectetur doloribus consequuntur recusandae ut vel. Ullam distinctio reiciendis accusantium ipsum. </p>
+
+                </div>
+            </div>
+
+            <div class="NewsContainer">
+                    <h1>December 20, 2018: Big Announcements Yet to Come!!</h1>
+                    <br>
+                    <div class="NewsContent">
+                            <p> 
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni deserunt aliquam commodi, eos voluptate harum dolores similique, repellendus, consectetur doloribus consequuntur recusandae ut vel. Ullam distinctio reiciendis accusantium ipsum. Ullam distinctio reiciendis accusantium ipsum.Ullam distinctio reiciendis accusantium ipsum. </p>
+                    </div>
+                </div>
+    </div>
+
+</body>
+</html>
